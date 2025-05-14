@@ -4,8 +4,7 @@ import { Projects } from "@/components/Projects";
 import { Resume } from "@/components/Resume";
 import { Services } from "@/components/Services";
 import { Testimonials } from "@/components/Testimonial";
-// import {Contact} from '@/components/Contact'
-import Footer from "@/components/footer";
+import {Footer} from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { BackgroundLines } from "@/components/ui/BackgroundLines";
 

@@ -13,7 +13,7 @@ export function Footer() {
         />
       </a>
       <span className="text-[0.9rem] font-[500] text-[#9e9e9e]">
-        Going To Internet - Copyright 2024
+        © 2024 Rekhta Menahil. All Rights Reserved.
       </span>
     </div>
   );

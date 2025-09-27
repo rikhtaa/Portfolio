@@ -14,53 +14,32 @@ import { Cover } from "@/components/ui/cover";
 export function Services() {
   const features = [
     {
-      title: "Front-End",
+      title: "Front-End Development",
       description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
+        "Crafting responsive, accessible, and user-focused interfaces with modern frameworks.",
       icon: <IconTerminal2 />,
     },
     {
-      title: "Back-End",
+      title: "Back-End Development",
       description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
+        "Designing and building secure, scalable, and efficient server-side systems.",
       icon: <IconAdjustmentsBolt />,
     },
+
     {
-      title: "Graphic Design",
-      description:
-        "Our prices are best in the market. No cap, no lock, no credit card required.",
-      icon: <IconEaseInOut />,
-    },
-    {
-      title: "Dev Ops",
-      description: "We just cannot be taken down by anyone.",
-      icon: <IconCloud />,
-    },
-    {
-      title: "Multi-talented Team",
-      description: "You can simply share passwords instead of buying new seats",
+       title: "DevOps & Deployment",
+      description: "Streamlining development workflows with CI/CD, cloud deployment, and automation.",
+       icon: <IconCloud />,
+     },
+     {
+      title: "Collaboration & Teamwork",
+      description: "Thriving in cross-functional teams and driving projects from concept to launch.",
       icon: <IconRouteAltLeft />,
     },
-    {
-      title: "24/7 Customer Support",
-      description:
-        "We are available a 100% of the time. Atleast our AI Agents are.",
-      icon: <IconHelp />,
-    },
-    {
-      title: "Money back guarantee",
-      description:
-        "If you donot like EveryAI, we will convince you to like us.",
-      icon: <IconCurrencyDollar />,
-    },
-    {
-      title: "And everything else",
-      description: "I just ran out of copy ideas. Accept my sincere apologies",
-      icon: <IconHeart />,
-    },
+  
   ];
   return (
-    <div className="mt-[150px] flex flex-col" id="services">
+    <div className="flex flex-col" id="services">
       <div className="px-8 flex flex-col justify-center items-center">
         <h2 className="mx-auto text-white text-xl md:text-4xl lg:text-5xl font-sans relative z-20 font-bold tracking-tight">
           <Cover>Our Services</Cover>
@@ -69,7 +48,7 @@ export function Services() {
           We Provide You Quality Of Services
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  relative z-10 py-10 max-w-7xl mx-auto">
         {features.map((feature, index) => (
           <Feature key={feature.title} {...feature} index={index} />
         ))}

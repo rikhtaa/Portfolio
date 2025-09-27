@@ -106,7 +106,7 @@ export const Carousel = ({
                   },
                 }}
                 key={"card" + index}
-                className="rounded-3xl last:pr-[5%] md:last:pr-[33%]">
+                className="rounded-3xl last:pr-[4%] md:last:pr-[1%]">
                 {item}
               </motion.div>
             ))}
@@ -140,37 +140,37 @@ export const Card = ({
   const containerRef = useRef(null);
   const { onCardClose, currentIndex } = useContext(CarouselContext);
 
-  useEffect(() => {
-    function onKeyDown(event) {
-      if (event.key === "Escape") {
-        handleClose();
-      }
-    }
+  // useEffect(() => {
+  //   function onKeyDown(event) {
+  //     if (event.key === "Escape") {
+  //       handleClose();
+  //     }
+  //   }
 
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+  //   if (open) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
 
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [open]);
+  //   window.addEventListener("keydown", onKeyDown);
+  //   return () => window.removeEventListener("keydown", onKeyDown);
+  // }, [open]);
 
-  useOutsideClick(containerRef, () => handleClose());
+  // useOutsideClick(containerRef, () => handleClose());
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  // const handleOpen = () => {
+  //   setOpen(true);
+  // };
 
-  const handleClose = () => {
-    setOpen(false);
-    onCardClose(index);
-  };
+  // const handleClose = () => {
+  //   setOpen(false);
+  //   onCardClose(index);
+  // };
 
   return (
     <>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {open && (
           <div className="fixed inset-0 z-50 h-screen overflow-auto">
             <motion.div
@@ -204,11 +204,12 @@ export const Card = ({
             </motion.div>
           </div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
-        onClick={handleOpen}
+        // onClick={handleOpen}
         className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-[40rem] md:w-96 dark:bg-neutral-900">
+        <a href={card.link}   rel="noopener noreferrer">
         <div
           className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-black/50 via-transparent to-transparent" />
         <div className="relative z-40 p-8">
@@ -228,6 +229,7 @@ export const Card = ({
           alt={card.title}
           fill
           className="absolute inset-0 z-10 object-cover" />
+        </a>
       </motion.button>
     </>
   );

@@ -10,14 +10,15 @@ export function Resume() {
         <div className="flex flex-col gap-[30px]" id="resume">
           <div>
             <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]">
-              <Cover>Freelancing</Cover>
+              <Cover>CodeBite</Cover>
             </h4>
-            <span className="text-blue-400 my-[10px]">2019 - 2023</span>
+            <span className="text-blue-400 my-[10px]">2024 - 2025</span>
             <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-              Work as a FullStack Developer
+             Full-Stack Developer Intern
             </p>
           </div>
-          <div>
+          {/* add more Experience */}
+          {/* <div>
             <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]">
               <Cover>AxcelerateAI</Cover>
             </h4>
@@ -25,7 +26,7 @@ export function Resume() {
             <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
               Work as a FullStack Developer
             </p>
-          </div>
+          </div> */}
         </div>
       ),
     },
@@ -37,12 +38,12 @@ export function Resume() {
             <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]">
               <Cover>Govt College</Cover>
             </h4>
-            <span className="text-blue-400 my-[10px]">2019 - 2023</span>
+            <span className="text-blue-400 my-[10px]">2024</span>
             <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-              FSC Computer-Science
+              Computer Science, First Year
             </p>
           </div>
-          <div>
+          {/* <div>
             <h4 className="text-[#f4f4f4] text-[1.8rem] font-[600]">
               <Cover>ABC University</Cover>
             </h4>
@@ -50,7 +51,7 @@ export function Resume() {
             <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
               Software Developer
             </p>
-          </div>
+          </div> */}
         </div>
       ),
     },

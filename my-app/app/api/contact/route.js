@@ -6,16 +6,13 @@ import nodemailer from 'nodemailer';
 const transporter = nodemailer.createTransport({
   service: "gmail",   
   auth: {
-    user: process.env.NEXT_PUBLIC_SENDER_USER,
-    pass: process.env.NEXT_PUBLIC_SENDER_PASS,
+    user: process.env.SENDER_USER,
+    pass: process.env.SENDER_PASS,
   },
 });
 
 
 export async function POST(request){
-  console.log("User:", process.env.NEXT_PUBLIC_SENDER_USER);
-  console.log("Pass:", process.env.NEXT_PUBLIC_SENDER_PASS);
-  console.log("To:", process.env.NEXT_PUBLIC_RECIEVER_USER);
   try {
     //Get data from the request:
     const {name, email, message} = await request.json()
@@ -30,8 +27,8 @@ export async function POST(request){
     }
     //Build the email:
     const mailOption = {
-      from:process.env.NEXT_PUBLIC_SENDER_USER,
-      to:process.env.NEXT_PUBLIC_RECIEVER_USER,
+      from:process.env.SENDER_USER,
+      to:process.env.RECIEVER_USER,
       subject:"New Contact Form Submission",
       text:`
       Name:${name}
@@ -48,7 +45,6 @@ export async function POST(request){
       {status:200},
     )
   } catch (error){
-    console.error("Error processing contact form:", error);
     return NextResponse.json(
       {error: "Failed processing contact form!"},
       {status:500},

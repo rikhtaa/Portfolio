@@ -113,9 +113,6 @@ export function Contact() {
       className="max-w-[800px] backdrop-blur-[18px] bg-[#11121617] z-[20] w-full mx-auto flex flex-col items-center rounded-none md:rounded-2xl p-4 md:p-8 shadow-input my-[100px]"
       id="contact"
     >
-      {/* <div className="absolute inset-0 z-0 pointer-events-none">
-              <BackgroundLines />
-      </div> */}
       <h2 className="text-4xl font-bold text-neutral-800 dark:text-neutral-200">
         Do You Have A Project,<Cover>Lets Discuss</Cover>
       </h2>

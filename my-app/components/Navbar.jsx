@@ -4,7 +4,7 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconHome
 } from "@tabler/icons-react";
-import { Code2Icon, DollarSignIcon, MailIcon, Settings2Icon, StarIcon } from "lucide-react";
+import { Code2Icon, MailIcon, Settings2Icon } from "lucide-react";
 import { GoProjectRoadmap } from "react-icons/go";
 
 export function Navbar() {
@@ -38,21 +38,21 @@ export function Navbar() {
       ),
       href: "#resume",
     },
-    {
-      title: "Testimonials",
-      icon: (
-        <StarIcon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#testimonials",
-    },
+    // {
+    //   title: "Testimonials",
+    //   icon: (
+    //     <StarIcon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //   ),
+    //   href: "#testimonials",
+    // },
 
-    {
-      title: "Pricing",
-      icon: (
-        <DollarSignIcon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#pricing",
-    },
+    // {
+    //   title: "Pricing",
+    //   icon: (
+    //     <DollarSignIcon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //   ),
+    //   href: "#pricing",
+    // },
     {
       title: "Contact",
       icon: (
@@ -64,7 +64,6 @@ export function Navbar() {
   return (
     <div className="fixed left-[90%] translate-x-[-90%] md:left-[50%] md:translate-x-[-50%] bottom-[50px] z-[101]">
       <FloatingDock 
-        // only for demo, remove for production
         items={links} />
     </div>
   );

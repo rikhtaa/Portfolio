@@ -114,7 +114,7 @@ export function Contact() {
       id="contact"
     >
       <h2 className="text-4xl font-bold text-neutral-800 dark:text-neutral-200">
-        Do You Have A Project,<Cover>Lets Discuss</Cover>
+        Have a Project? <Cover>Let's Discuss.</Cover>
       </h2>
       {loadingMessage?.message && (
         <p

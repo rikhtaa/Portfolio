@@ -16,7 +16,7 @@ const people = [
 ];
 export default function HeroSection() {
   return (
-    <div className="w-full overflow-x-hidden min-h-screen grid lg:grid-cols-[1fr_0.4fr] gap-[290px]" >
+    <div className="w-full overflow-x-hidden min-h-screen grid lg:grid-cols-[1fr_0.4fr] lg:gap-[290px]" >
       <div className="max-w-[600px] w-[90%] mx-auto py-[30px]">
         <a href="/">
           <Image
@@ -66,7 +66,7 @@ export default function HeroSection() {
           Hire Me
         </a>
 
-        <h2 className="bg-clip-text mt-[100px] text-transparent text-start mr-auto bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-2xl lg:text-3xl font-sans relative z-20 font-bold tracking-tight">
+        <h2 className="bg-clip-text lg:mt-[100px] text-transparent text-start mr-auto bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-2xl lg:text-3xl font-sans relative z-20 font-bold tracking-tight">
           About Me
         </h2>
         <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-start mt-[20px]">

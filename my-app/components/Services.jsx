@@ -1,3 +1,4 @@
+"use client"
 import { cn } from "@/lib/utils";
 import {
   IconAdjustmentsBolt,
@@ -17,73 +18,74 @@ export function Services() {
       title: "Front-End Development",
       description:
         "Crafting responsive, accessible, and user-focused interfaces with modern frameworks.",
-      icon: <IconTerminal2 />,
+      icon: <IconTerminal2 size={28} />,
     },
     {
       title: "Back-End Development",
       description:
-        "Designing and building secure, scalable, and efficient server-side systems.",
-      icon: <IconAdjustmentsBolt />,
+        "Designing secure, scalable and efficient server-side systems.",
+      icon: <IconAdjustmentsBolt size={28} />,
     },
-
     {
-       title: "DevOps & Deployment",
-      description: "Streamlining development workflows with CI/CD, cloud deployment, and automation.",
-       icon: <IconCloud />,
-     },
-     {
-      title: "Collaboration & Teamwork",
-      description: "Thriving in cross-functional teams and driving projects from concept to launch.",
-      icon: <IconRouteAltLeft />,
+      title: "DevOps & Deployment",
+      description:
+        "Streamlining workflows with CI/CD, cloud deployment and automation.",
+      icon: <IconCloud size={28} />,
     },
-  
+    {
+      title: "Collaboration & Teamwork",
+      description:
+        "Driving projects from concept to launch in cross-functional teams.",
+      icon: <IconRouteAltLeft size={28} />,
+    },
   ];
+
   return (
-    <div className="flex flex-col" id="services">
-      <div className="px-8 flex flex-col justify-center items-center">
-        <h2 className="mx-auto text-white text-xl md:text-4xl lg:text-5xl font-sans relative z-20 font-bold tracking-tight">
-          <Cover>Our Services</Cover>
-        </h2>
-        <p className="max-w-xl  text-[1rem] mt-[20px]text-center mt-[10px] md:text-lg text-neutral-700 dark:text-neutral-400">
-          We Provide You Quality Of Services
-        </p>
+    <section id="services" className="relative py-24 md:py-32">
+
+      <div className="w-[90%] max-w-[1200px] mx-auto">
+
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white">
+            <Cover>Services</Cover>
+          </h2>
+          <p className="mt-4 text-neutral-400 max-w-xl mx-auto text-sm md:text-base">
+            Delivering high-quality solutions tailored to modern digital needs.
+          </p>
+        </div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          {features.map((feature) => (
+            <Feature key={feature.title} {...feature} />
+          ))}
+
+        </div>
+
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  relative z-10 py-10 max-w-7xl mx-auto">
-        {features.map((feature, index) => (
-          <Feature key={feature.title} {...feature} index={index} />
-        ))}
-      </div>
-    </div>
+
+    </section>
   );
 }
 
-const Feature = ({ title, description, icon, index }) => {
+const Feature = ({ title, description, icon }) => {
   return (
-    <div
-      className={cn(
-        "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800",
-        (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
-        index < 4 && "lg:border-b dark:border-neutral-800"
-      )}
-    >
-      {index < 4 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
-      )}
-      {index >= 4 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
-      )}
-      <div className="mb-4 relative z-10 px-10 text-neutral-600 dark:text-neutral-400">
+    <div className="relative p-8 rounded-2xl border border-neutral-800 bg-neutral-900/40 backdrop-blur-sm hover:border-blue-500 transition-all duration-300 group">
+
+      <div className="text-blue-500 mb-6">
         {icon}
       </div>
-      <div className="text-lg font-bold mb-2 relative z-10 px-10">
-        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 dark:bg-neutral-700 group-hover/feature:bg-blue-500 transition-all duration-200 origin-center" />
-        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-neutral-800 dark:text-neutral-100">
-          {title}
-        </span>
-      </div>
-      <p className="text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
+
+      <h3 className="text-lg font-semibold text-white mb-3 group-hover:translate-x-1 transition duration-300">
+        {title}
+      </h3>
+
+      <p className="text-sm text-neutral-400 leading-relaxed">
         {description}
       </p>
+
     </div>
   );
 };

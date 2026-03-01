@@ -1,70 +1,48 @@
 "use client"
 import React from "react";
-import { FloatingDock } from "@/components/ui/floating-dock";
-import {
-  IconHome
-} from "@tabler/icons-react";
-import { Code2Icon, MailIcon, Settings2Icon } from "lucide-react";
-import { GoProjectRoadmap } from "react-icons/go";
+import Link from "next/link";
 
-export function Navbar() {
-  const links = [
-    {
-      title: "Home",
-      icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "/",
-    },
-
-    {
-      title: "Services",
-      icon: (
-        <Code2Icon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#services",
-    },
-    {
-      title: "Projects",
-      icon: (
-        <Settings2Icon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#projects",
-    },
-    {
-      title: "Resume",
-      icon: (
-        <GoProjectRoadmap className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#resume",
-    },
-    // {
-    //   title: "Testimonials",
-    //   icon: (
-    //     <StarIcon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    //   ),
-    //   href: "#testimonials",
-    // },
-
-    // {
-    //   title: "Pricing",
-    //   icon: (
-    //     <DollarSignIcon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    //   ),
-    //   href: "#pricing",
-    // },
-    {
-      title: "Contact",
-      icon: (
-        <MailIcon  className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#contact",
-    },
-  ];
+export function HeroNav() {
   return (
-    <div className="fixed left-[90%] translate-x-[-90%] md:left-[50%] md:translate-x-[-50%] bottom-[50px] z-[101]">
-      <FloatingDock 
-        items={links} />
-    </div>
+    <header className="absolute top-0 left-0 w-full z-50 flex justify-center sm:justify-center md:justify-end">
+
+      <nav
+        className="
+        mt-6 
+        px-5 py-2 
+        rounded-full 
+        border border-white/10 
+        bg-white/5 backdrop-blur-md
+        
+        md:bg-transparent 
+        md:border-none 
+        md:backdrop-blur-0
+        md:rounded-none
+        
+        flex gap-6 
+        text-sm text-neutral-300
+        md:mr-10
+        "
+      >
+
+        <Link href="/" className="hover:text-white transition">
+          HOME
+        </Link>
+        <Link href="#about" className="hover:text-white transition">
+          ABOUT
+        </Link>
+
+        <Link href="#services" className="hover:text-white transition">
+          SERVICES
+        </Link>
+
+        <Link href="#resume" className="hover:text-white transition">
+          RESUME
+        </Link>
+
+       
+      </nav>
+
+    </header>
   );
 }

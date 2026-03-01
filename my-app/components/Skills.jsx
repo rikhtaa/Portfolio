@@ -6,7 +6,7 @@ import { SiReact, SiNodedotjs, SiDocker, SiTypescript, SiNextdotjs } from "react
 
 export function Skills() {
   return (
-    <div className="flex flex-col mt-[100px] justify-start items-center">
+    <div className="flex flex-col mt-[8px] justify-start items-center">
       <h3 className="text-xl mb-[-50px] md:mb-[-100px] font-bold text-neutral-200">
         Skills
       </h3>

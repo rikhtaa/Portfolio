@@ -22,7 +22,7 @@ export  function HeroSection() {
         </h2>
 
         <p className="mt-6 text-neutral-400 text-base sm:text-lg leading-relaxed max-w-md mx-auto">
-          I build clean, scalable and user-focused web applications that solve real problems.
+          I build scalable, secure web applications and backend systems.
         </p>
 
         <div className="mt-8">

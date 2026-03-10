@@ -3,7 +3,7 @@
 ![Next.js](https://img.shields.io/badge/Next.js-14-black)
 ![Tailwind](https://img.shields.io/badge/TailwindCSS-3-blue)
 
-![Portfolio Preview](./public/images/preview.png)
+![Portfolio Preview](./my-app/public/images/preview.png)
 
 A high-performance portfolio built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**.  
 Designed with a focus on clean aesthetics, scalable architecture, and seamless user interactions.

@@ -2,7 +2,6 @@
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black)
 ![Tailwind](https://img.shields.io/badge/TailwindCSS-3-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
 
 ![Portfolio Preview](./public/images/preview.png)
 

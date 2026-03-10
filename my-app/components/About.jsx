@@ -11,21 +11,20 @@ export  function About() {
           About <Cover>Me</Cover>
         </h1>
 
-        <p className="text-neutral-400 text-lg sm:text-xl leading-relaxed mb-6">
-          Hi, I’m <span className="text-blue-500 font-semibold">Rekhta Menahil</span>, a passionate Full-Stack Developer. 
-          I enjoy building <span className="font-semibold text-white">clean, scalable, and user-focused web applications</span> 
-          that solve real-world problems.
-        </p>
+        <p class="text-neutral-400 text-lg sm:text-xl leading-relaxed mb-6">
+  Hi, I’m <span class="text-blue-500 font-semibold">Rekhta Menahil</span>, a 2nd-year Computer Science student and Full-Stack Developer focused on 
+  <span class="font-semibold text-white">backend engineering and system design</span>.
+</p>
 
-        <p className="text-neutral-400 text-lg sm:text-xl leading-relaxed mb-6">
-          My journey started with curiosity and a love for coding. Over time, I’ve explored both front-end and back-end technologies, 
-          learning to turn ideas into reality with elegant and efficient code.
-        </p>
+<p class="text-neutral-400 text-lg sm:text-xl leading-relaxed mb-6">
+  I’m currently building a microservices-based MERN application to learn how production-grade systems are designed, 
+  including secure authentication, scalable APIs, and distributed services.
+</p>
 
-        <p className="text-neutral-400 text-lg sm:text-xl leading-relaxed">
-          When I’m not coding, I love exploring new tech trends, improving my design skills, and creating projects that make an impact. 
-          Let’s build something amazing together!
-        </p>
+<p class="text-neutral-400 text-lg sm:text-xl leading-relaxed">
+  Outside of coding, I enjoy reading, exploring new technologies, 
+  and learning Japanese.
+</p>
       </div>
     </section>
   );

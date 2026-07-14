@@ -2,29 +2,30 @@
 
 import { Cover } from "@/components/ui/cover";
 
-export  function About() {
+export function About() {
   return (
-    <section id="about" className="relative min-h-[100svh] flex items-center justify-center text-center px-6 sm:px-10 lg:px-16">
-      
+    <section
+      id="about"
+      className="relative flex items-center justify-center text-center px-6 sm:px-10 lg:px-16 py-16 sm:py-24 lg:py-28"
+    >
+
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-5 sm:mb-6">
           About <Cover>Me</Cover>
         </h1>
 
-        <p class="text-neutral-400 text-lg sm:text-xl leading-relaxed mb-6">
-  Hi, I’m <span class="text-blue-500 font-semibold">Rekhta Menahil</span>, a 2nd-year Computer Science student and Full-Stack Developer focused on 
-  <span class="font-semibold text-white">backend engineering and system design</span>.
-</p>
+        <p className="text-neutral-400 text-base sm:text-lg lg:text-xl leading-relaxed mb-5 sm:mb-6">
+          Hi, I&apos;m <span className="text-blue-500 font-semibold">Rekhta Menahil</span>, a backend-focused developer who started coding at 18 with a web development course. Now a 2nd-year CS student working on{" "}
+          <span className="font-semibold text-white">SaaS platforms and microservices</span>.
+        </p>
 
-<p class="text-neutral-400 text-lg sm:text-xl leading-relaxed mb-6">
-  I’m currently building a microservices-based MERN application to learn how production-grade systems are designed, 
-  including secure authentication, scalable APIs, and distributed services.
-</p>
+        <p className="text-neutral-400 text-base sm:text-lg lg:text-xl leading-relaxed mb-5 sm:mb-6">
+          At CodeBite, I built the backend for a coding battle platform, including challenge versioning, deterministic execution, and match resolution. Alongside that, I&apos;ve worked on a multi-tenant AI support SaaS with RAG agents and voice calling, and a multi-vendor e-commerce platform with microservices.
+        </p>
 
-<p class="text-neutral-400 text-lg sm:text-xl leading-relaxed">
-  Outside of coding, I enjoy reading, exploring new technologies, 
-  and learning Japanese.
-</p>
+        <p className="text-neutral-400 text-base sm:text-lg lg:text-xl leading-relaxed">
+          Outside of code, I like learning new things: currently reading more books, picking up Japanese, and exploring new tech.
+        </p>
       </div>
     </section>
   );

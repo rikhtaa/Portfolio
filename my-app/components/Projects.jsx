@@ -1,52 +1,87 @@
 "use client";
 
-import React from "react";
-import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import { ArrowUpRight } from "lucide-react";
 
-export function Projects() {
-  const cards = data.map((card, index) => (
-    <Card key={card.src} card={card} index={index} />
-  ));
-
-  return (
-    <div className="w-full h-full py-20" id="projects">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-        Recent Projects
-      </h2>
-      <Carousel items={cards} />
-    </div>
-  );
-}
-
-const data = [
+const projects = [
+  {
+    category: "B2B SaaS Platform",
+    title: "AI-Powered Customer Support",
+    description:
+      "A multi-tenant customer support SaaS with an embeddable AI chat widget. RAG-powered AI agents handle chat and voice calling via Vapi, with org-scoped auth and role-based access control.",
+    stack: ["Next.js", "Convex", "Turborepo", "Clerk", "Vapi"],
+    link: "https://support-platform-web-xi.vercel.app",
+  },
   {
     category: "E-commerce Website",
-    title: "Smart Online Shopping Experience",
-    src: "https://plus.unsplash.com/premium_photo-1700056213816-0fd7a8171b01?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    link: "https://e-commerce-website-u9cv.vercel.app/"
-  },
-  {
-    category: "Hotel Booking UI",
-    title: "Seamless Travel Reservation Design",
-    src: "https://images.unsplash.com/photo-1549294413-26f195200c16?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG90ZWwlMjBib29raW5nfGVufDB8fDB8fHww",
-    link: "https://react10-hotel-booking-ui.vercel.app/"
-  },
-  {
-    category: "Textile Factory System",
-    title: "Efficient Production Management App",
-    src: "https://images.unsplash.com/photo-1567429159658-8c4f96a3d756?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRleHRpbGUlMjBmYWN0b3J5fGVufDB8fDB8fHww",
-    link: "https://textile-factory-ui.vercel.app/login"
+    title: "Multi-Vendor Marketplace",
+    description:
+      "A multi-vendor e-commerce platform built with 10+ independent microservices in an Nx monorepo. API gateway with rate limiting, Kafka event streaming, JWT auth with token rotation, and Stripe payments.",
+    stack: ["Next.js", "Nx Monorepo", "MongoDB", "Kafka", "Stripe"],
+    link: "https://github.com/rikhtaa/multi-vendor-ecommerce-saas",
   },
   {
     category: "Spline Animation",
     title: "Immersive 3D Interactive Design",
-    src: "https://images.unsplash.com/photo-1754343063447-3ca1091ad2f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTkwfHxzcGxpbmUlMjBhbmltYXRpb258ZW58MHx8MHx8fDA%3D",
-    link: "https://react-spline-interactive-ui.vercel.app/"
-  },
-  {
-    category: "Platformer Game",
-    title: "Engaging 2D Adventure Gameplay",
-    src: "https://images.unsplash.com/photo-1634660476928-63015cdbc6d1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzF8fHBsYXRmb3JtZXIlMjBnYW1lfGVufDB8fDB8fHww",
-    link: "https://platformergame9.netlify.app/"
+    description:
+      "A 3D interactive UI built with Spline and React — exploring how 3D scenes can be embedded and controlled directly inside a web app while staying performant.",
+    stack: ["React", "Spline"],
+    link: "https://react-spline-interactive-ui.vercel.app/",
   },
 ];
+
+export function Projects() {
+  return (
+    <section id="projects" className="py-16 sm:py-24 lg:py-28 px-6 sm:px-10 lg:px-16">
+      <h2 className="max-w-6xl mx-auto text-3xl md:text-5xl font-bold text-white mb-12">
+        Recent Projects
+      </h2>
+
+      <div className="max-w-6xl mx-auto grid gap-6 md:grid-cols-3">
+        {projects.map((project) => (
+          <div
+            key={project.title}
+            className="flex flex-col bg-neutral-900 border border-neutral-800 rounded-2xl p-6
+             transition-all duration-300 hover:border-neutral-600 hover:-translate-y-1
+             hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
+          >
+            <p className="text-blue-500 text-xs font-semibold tracking-wide uppercase mb-2">
+              {project.category}
+            </p>
+
+            <h3 className="text-white text-xl font-bold mb-3 leading-snug">
+              {project.title}
+            </h3>
+
+            <p className="text-neutral-400 text-sm leading-relaxed mb-5 flex-1">
+              {project.description}
+            </p>
+
+            <div className="flex flex-wrap gap-2 mb-5">
+              {project.stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="text-xs text-neutral-400 border border-neutral-700 rounded-full px-3 py-1"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {project.link ? (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-sm text-white font-semibold hover:text-blue-400 transition-colors"
+              >
+                View project <ArrowUpRight size={16} strokeWidth={2} />
+              </a>
+            ) : (
+              <span className="text-sm text-neutral-600">Private repo</span>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
